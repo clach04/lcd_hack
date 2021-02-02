@@ -1,0 +1,24 @@
+# from https://www.raspberrypi.org/documentation/linux/usage/systemd.md
+# Also see
+# https://coreos.com/os/docs/latest/using-environment-variables-in-systemd-units.html
+# https://opensource.com/life/16/11/running-commands-shutdown-linux
+# https://github.com/clach04/pirest/blob/master/scripts/pirest.service
+
+Unit]
+Description=LCD hack at startup and shutdown
+Requires=network.target
+After=network.target
+DefaultDependencies=no
+Before=shutdown.target reboot.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/true
+ExecStart=/home/pi/py/lcd_hack/lcd_hack.py
+ExecStop=/home/pi/py/lcd_hack/lcd_hack.py "Shutting down....."
+
+[Install]
+WantedBy=multi-user.target
+
+
