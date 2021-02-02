@@ -49,6 +49,8 @@ except IndexError:
 
         lcd.clear()
         lcd.write_string(lcd_str)
+        if ip_addr:
+            break
         time.sleep(wait_time)
 
 lcd.clear()
