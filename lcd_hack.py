@@ -6,6 +6,7 @@ import platform
 import socket
 import struct  # only used my linux only code
 import sys
+import time
 
 from RPLCD.i2c import CharLCD  # from https://github.com/dbrgn/RPLCD
 
@@ -28,7 +29,7 @@ def determine_ip():
                 break
         except IOError:
             pass
-    return 'unknown IP'
+    return None  # unknown IP
 
 
 
@@ -40,7 +41,15 @@ try:
     lcd_str = argv[1]
 except IndexError:
     lcd_str = 'The quick brown fox jumps over the lazy dog'
-    lcd_str = socket.gethostname() + '\n\r' + determine_ip()
+    ip_addr = None
+    wait_time = 30
+    while ip_addr is None:
+        ip_addr = determine_ip()
+        lcd_str = socket.gethostname() + '\n\r' + (ip_addr or 'looking up IP...')
+
+        lcd.clear()
+        lcd.write_string(lcd_str)
+        time.sleep(wait_time)
 
 lcd.clear()
 lcd.write_string(lcd_str)
