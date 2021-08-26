@@ -4,6 +4,7 @@ Quick app to use the 2x16 character LCD display that is included with the Recon 
 
 See https://github.com/dhylands/python_lcd#custom-characters for indentifying which character sets are supported.
 
+TODO once https://github.com/dhylands/python_lcd/issues/36 accepted implement support for that library.
 
 ## Installing
 
