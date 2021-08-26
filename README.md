@@ -1,6 +1,6 @@
 # lcd_hack
 
-Quick app to use the LCD display that is included with the Recon Sentinel (https://hackaday.com/2020/11/16/teardown-recon-sentinel/) devices, viz a Rock64v2 connected over GPIO I²C port expander (using a PCF8574) to a Hitachi HD44780 controller.
+Quick app to use the 2x16 character LCD display that is included with the Recon Sentinel (https://hackaday.com/2020/11/16/teardown-recon-sentinel/) devices, viz a Rock64v2 connected over GPIO I²C port expander (using a PCF8574) to a Hitachi HD44780 controller.
 
 See https://github.com/dhylands/python_lcd#custom-characters for indentifying which character sets are supported.
 
