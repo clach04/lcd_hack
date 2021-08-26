@@ -1,5 +1,12 @@
 # lcd_hack
 
+Quick app to use the LCD display that is included with the Recon Sentinel (https://hackaday.com/2020/11/16/teardown-recon-sentinel/) devices, viz a Rock64v2 connected over GPIO I²C port expander (using a PCF8574) to a Hitachi HD44780 controller.
+
+See https://github.com/dhylands/python_lcd#custom-characters for indentifying which character sets are supported.
+
+
+## Installing
+
 If installing/working with a source checkout issue:
 
     sudo apt install python3-pip
