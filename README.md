@@ -9,6 +9,8 @@ If installing/working with a source checkout issue:
 
 See https://github.com/dbrgn/RPLCD for detailed install instructions.
 
+See https://clach04.github.io/lcdchargen/ for custom character generator that emits Python (as well as C code), source code available from https://github.com/clach04/lcdchargen/tree/python
+
 ## Service
 
 Systemd service (e.g. for Raspbian, Armbian, etc.).
